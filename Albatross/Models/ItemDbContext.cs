@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Albatross.Models;
 
 namespace Albatross.Models;
 
@@ -29,19 +30,3 @@ public class ItemDbContext : DbContext
         optionsBuilder.UseLazyLoadingProxies();
     }*/
 }
-
-
-
-/*using Microsoft.EntityFrameworkCore;
-
-namespace Albatross.Models;
-
-public class ItemDbContext : DbContext
-{
-    public ItemDbContext(DbContextOptions<ItemDbContext> options) : base(options)
-    {
-        Database.EnsureCreated();
-    }
-
-    public DbSet<Item> Items { get; set; }
-} */

@@ -3,7 +3,9 @@ using System.Threading.Tasks;        // Makes it possible to use async-methodes
 using Microsoft.AspNetCore.Mvc;      // MVC-foundation: Controller, IActionResult, View(), RedirectToAction()
 using Albatross.Models;              // Access to our own Models
 using System.Security.Cryptography;  // Access to cryptographic algorithms
-using System.Text;                   // To convert pw from string to byte-array
+using System.Text;  
+using System.Linq;
+
 
 namespace Albatross.Controllers;
 
@@ -46,12 +48,12 @@ public class AccountController : Controller
     {
         return View();
     }
-
+/*
     [HttpPost]
     public IActionResult Login(string username, string password)
     {
         //TO DO: Get user from DB based on username
-        var user = db.Users.FirstOrDefault(u => u.Username == username);
+       /* var user = db.Users.FirstOrDefault(u => u.Username == username);
 
         if (user != null && user.PasswordHashed == HashPassword(password))
         {
@@ -69,5 +71,5 @@ public class AccountController : Controller
     {
         //TO DO: Clear session/cookie
         return RedirectToAction("Login");
-    }
+    } */
 }
